@@ -2,11 +2,58 @@
     "name": "realwds-api",
     "version": 2,
     "routes": [{
-        "src": "/",
-        "headers": {
-            "cache-control": "no-cache, no-store, must-revalidate",
-            "Access-Control-Allow-Origin": "*"
+            "src": "/",
+            "headers": {
+                "cache-control": "no-cache, no-store, must-revalidate",
+                "Access-Control-Allow-Origin": "*"
+            },
+            "dest": "/api"
         },
-        "dest": "/api"
-    }]
+        {
+
+            "src": "/biying",
+            "headers": {
+                "cache-control": "no-cache, no-store, must-revalidate",
+                "Access-Control-Allow-Origin": "*"
+            },
+            "dest": "/api/biying"
+        },
+        {
+
+            "src": "/360/search",
+            "headers": {
+                "cache-control": "no-cache, no-store, must-revalidate",
+                "Access-Control-Allow-Origin": "*"
+            },
+            "dest": "/api/360/search"
+        },
+        {
+
+            "src": "/360/hotSearch",
+            "headers": {
+                "cache-control": "no-cache, no-store, must-revalidate",
+                "Access-Control-Allow-Origin": "*"
+            },
+            "dest": "/api/360/hotSearch"
+        },
+        {
+
+            "src": "/360/getAllCategories",
+            "headers": {
+                "cache-control": "no-cache, no-store, must-revalidate",
+                "Access-Control-Allow-Origin": "*"
+            },
+            "dest": "/api/360/getAllCategories"
+        },
+        {
+
+            "src": "/360/getAppsByCategory",
+            "headers": {
+                "cache-control": "no-cache, no-store, must-revalidate",
+                "Access-Control-Allow-Origin": "*"
+            },
+            "dest": "/api/360/getAppsByCategory"
+        }
+
+    ]
 }
