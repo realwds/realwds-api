@@ -53,25 +53,6 @@
                 "Access-Control-Allow-Origin": "*"
             },
             "dest": "/api/360/getAppsByCategory"
-        },
-        {
-
-            "src": "/bying",
-            "headers": {
-                "cache-control": "no-cache, no-store, must-revalidate",
-                "Access-Control-Allow-Origin": "*"
-            },
-            "dest": "/api/bying"
-        },
-        {
-
-            "src": "/by",
-            "headers": {
-                "cache-control": "no-cache, no-store, must-revalidate",
-                "Access-Control-Allow-Origin": "*"
-            },
-            "dest": "/api/by"
         }
-
     ]
 }
