@@ -2,23 +2,9 @@
   "name": "vercel-api",
   "version": "1.0.0",
   "description": "realwds vercel api",
-  "main": "app.js",
+  "main": "api/index.js",
   "dependencies": {
-    "koa": "^2.13.0",
-    "koa-bodyparser": "^4.3.0",
-    "koa-router": "^10.0.0",
-    "nodemon": "^2.0.6"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/register": "^7.12.10",
-    "axios": "^0.21.1",
-    "fs": "0.0.1-security",
-    "koa2-cors": "^2.0.6"
-  },
-  "scripts": {
-    "dev": "nodemon app.js"
+    "request": "^2.88.2"
   },
   "author": "realwds",
   "license": "ISC"
