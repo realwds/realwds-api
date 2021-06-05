@@ -1,6 +1,25 @@
+const request = require('request')
+
 module.exports = async(req, res) => {
-  res.json({
-    status: 'ok',
-    msg: "hello, vercel api"
+  const start = req.query.start ? req.query.start : 0
+  const count = req.query.count ? req.query.count : 8
+
+  var options = {
+    method: 'get',
+    url: `http://cn.bing.com/HPImageArchive.aspx?format=js&idx=${start}&n=${count}`
+  }
+
+  request(options, function(error, response) {
+    if (error) {
+      res.json({
+        status: false,
+        msg: "Failed to get time data"
+      })
+    } else {
+      res.json({
+        status: 'ok',
+        data: JSON.parse(response.body)
+      })
+    }
   })
-})
+}
