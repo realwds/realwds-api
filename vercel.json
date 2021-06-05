@@ -1,6 +1,6 @@
 {
     "name": "realwds-api",
-    "version": 1,
+    "version": 2,
     "routes": [{
         "src": "/",
         "headers": {
