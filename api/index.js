@@ -4,7 +4,7 @@ module.exports = async(req, res) => {
   const start = req.query.start ? req.query.start : 0
   const count = req.query.count ? req.query.count : 8
   
-  const options = {
+  var options = {
     method: 'get',
     url: `http://cn.bing.com/HPImageArchive.aspx?format=js&idx=${start}&n=${count}`
   }
@@ -18,7 +18,7 @@ module.exports = async(req, res) => {
     } else {
       res.json({
         status: 'ok',
-        data: JSON.parse(response.body)
+        data: response.body
       })
     }
   })
