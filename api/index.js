@@ -1,7 +1,7 @@
 module.exports = async(req, res) => {
   res.json({
-    status: false,
-    msg: "Please choose true path",
+    code: 1024,
+    msg: "welcome to realwds's api",
     copyright: "https://blog.realwds.com"
   })
 }
