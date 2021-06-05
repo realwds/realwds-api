@@ -1,23 +1,13 @@
-const request = require('request')
+const axios = require('axios')
 
-module.exports = async(req, res) => {
-
-  var options = {
+module.exports = async (req, res) => {
+  const result = await axios({
     method: 'get',
     url: `http://openbox.mobilem.360.cn/html/api/wallpaperhot.html`
-  }
+  })
 
-  request(options, function(error, response) {
-    if (error) {
-      res.json({
-        status: false,
-        msg: "Failed to get 360-shotSearch data"
-      })
-    } else {
-      res.json({
-        status: 'ok',
-        data: JSON.parse(response.data)
-      })
-    }
+  res.json({
+    status: 'ok',
+    data: result.data
   })
 }
