@@ -1,5 +1,5 @@
 {
-    "name": "vercel-api",
+    "name": "realwds-api",
     "version": 1,
     "routes": [{
         "src": "/",
