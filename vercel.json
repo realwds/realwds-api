@@ -11,48 +11,48 @@
         },
         {
 
-            "src": "/api/biying",
+            "src": "/biying",
             "headers": {
                 "cache-control": "no-cache, no-store, must-revalidate",
                 "Access-Control-Allow-Origin": "*"
             },
-            "dest": "/biying"
+            "dest": "/api/biying/"
         },
         {
 
-            "src": "/api/360/search",
+            "src": "/360/search",
             "headers": {
                 "cache-control": "no-cache, no-store, must-revalidate",
                 "Access-Control-Allow-Origin": "*"
             },
-            "dest": "/360/search"
+            "dest": "/api/360/search"
         },
         {
 
-            "src": "/api/360/hotSearch",
+            "src": "/360/hotSearch",
             "headers": {
                 "cache-control": "no-cache, no-store, must-revalidate",
                 "Access-Control-Allow-Origin": "*"
             },
-            "dest": "/360/hotSearch"
+            "dest": "/api/360/hotSearch"
         },
         {
 
-            "src": "/api/360/getAllCategories",
+            "src": "/360/getAllCategories",
             "headers": {
                 "cache-control": "no-cache, no-store, must-revalidate",
                 "Access-Control-Allow-Origin": "*"
             },
-            "dest": "/360/getAllCategories"
+            "dest": "/api/360/getAllCategories"
         },
         {
 
-            "src": "/api/360/getAppsByCategory",
+            "src": "/360/getAppsByCategory",
             "headers": {
                 "cache-control": "no-cache, no-store, must-revalidate",
                 "Access-Control-Allow-Origin": "*"
             },
-            "dest": "/360/getAppsByCategory"
+            "dest": "/api/360/getAppsByCategory"
         }
 
     ]
