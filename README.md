@@ -1,6 +1,6 @@
 # realwds-api
 
-## ✅ 必应壁纸 api
+## 必应壁纸 api
 
 接口：`https://realwds-api.vercel.app/bing`
 
@@ -9,7 +9,7 @@
 |start| 从几开始，默认 0 | 可选 |
 |count| 截取数量，默认 1 | 可选 |
 
-## ✅ 360 壁纸 api
+## 360 壁纸 api
 
 获取360壁纸所有类目：`https://realwds-api.vercel.app/360/getAllCategories`
 
