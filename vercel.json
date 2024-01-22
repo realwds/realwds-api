@@ -3,58 +3,44 @@
   "version": 2,
   "routes": [
     {
-      "src": "/",
+      "src": "^/api/(.*)",
       "headers": {
         "cache-control": "no-cache, no-store, must-revalidate",
         "Access-Control-Allow-Origin": "*"
       },
-      "dest": "/api"
+      "dest": "/api/$1"
     },
     {
-      "src": "/bing",
+      "src": "^/bing",
       "headers": {
         "cache-control": "no-cache, no-store, must-revalidate",
         "Access-Control-Allow-Origin": "*"
       },
-      "dest": "/api/bing/"
+      "dest": "/api/bing"
     },
     {
-      "src": "/360/search",
+      "src": "^/360/(search|hotSearch|getAllCategories|getAppsByCategory)",
       "headers": {
         "cache-control": "no-cache, no-store, must-revalidate",
         "Access-Control-Allow-Origin": "*"
       },
-      "dest": "/api/360/search"
+      "dest": "/api/360/$1"
     },
     {
-      "src": "/360/hotSearch",
+      "src": "^/proxy/:match/:url*",
       "headers": {
         "cache-control": "no-cache, no-store, must-revalidate",
         "Access-Control-Allow-Origin": "*"
       },
-      "dest": "/api/360/hotSearch"
+      "dest": "https://:match/:url*"
     },
     {
-      "src": "/360/getAllCategories",
+      "src": "^/httpproxy/:match/:url*",
       "headers": {
         "cache-control": "no-cache, no-store, must-revalidate",
         "Access-Control-Allow-Origin": "*"
       },
-      "dest": "/api/360/getAllCategories"
-    },
-    {
-      "src": "/360/getAppsByCategory",
-      "headers": {
-        "cache-control": "no-cache, no-store, must-revalidate",
-        "Access-Control-Allow-Origin": "*"
-      },
-      "dest": "/api/360/getAppsByCategory"
+      "dest": "http://:match/:url*"
     }
-  ],
-  "rewrites": [
-    { "source": "/proxy/:match/:url*", "destination": "https://:match/:url*" },
-    { "source": "/proxy/:match/:url*/", "destination": "https://:match/:url*/" },
-    { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" },
-    { "source": "/httpproxy/:match/:url*/", "destination": "http://:match/:url*/" }
   ]
 }
