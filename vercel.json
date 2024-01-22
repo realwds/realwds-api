@@ -1,7 +1,14 @@
 {
   "name": "realwds-api",
   "version": 2,
-  "routes": [
+  "routes": [{
+      "src": "/",
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "Access-Control-Allow-Origin": "*"
+      },
+      "dest": "/api"
+    },
     {
       "src": "^/api/(.*)",
       "headers": {
@@ -25,22 +32,6 @@
         "Access-Control-Allow-Origin": "*"
       },
       "dest": "/api/360/$1"
-    },
-    {
-      "src": "^/proxy/:match/:url*",
-      "headers": {
-        "cache-control": "no-cache, no-store, must-revalidate",
-        "Access-Control-Allow-Origin": "*"
-      },
-      "dest": "https://:match/:url*"
-    },
-    {
-      "src": "^/httpproxy/:match/:url*",
-      "headers": {
-        "cache-control": "no-cache, no-store, must-revalidate",
-        "Access-Control-Allow-Origin": "*"
-      },
-      "dest": "http://:match/:url*"
     }
   ]
 }
