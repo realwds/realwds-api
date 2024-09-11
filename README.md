@@ -30,3 +30,7 @@
 |count| 截取数量，默认 10 | 可选 |
 
 获取今日热门搜索：`https://realwds-api.vercel.app/360/hotSearch`
+
+## Star History
+
+![Star History Chart](https://api.star-history.com/svg?repos=realwds/realwds-api&type=Date)
