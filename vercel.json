@@ -49,6 +49,14 @@
         "Access-Control-Allow-Origin": "*"
       },
       "dest": "/api/360/getAppsByCategory"
+    },
+    {
+      "src": "/test/webhook",
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "Access-Control-Allow-Origin": "*"
+      },
+      "dest": "/api/test/webhook"
     }
   ]
 }
