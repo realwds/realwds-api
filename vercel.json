@@ -57,6 +57,11 @@
         "Access-Control-Allow-Origin": "*"
       },
       "dest": "/api/test/webhook"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/api/404"
     }
   ]
 }
